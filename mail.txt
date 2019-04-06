@@ -1,0 +1,10 @@
+From: XXXXXXX <XXXXXXXXXXX@XXXXXXXX-service.jp>
+To: XXXXXXXXXXXX@XXXXX.com
+Subject: テストメール
+Content-Type: text/plain;charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+テストメール本文
+
+
+
