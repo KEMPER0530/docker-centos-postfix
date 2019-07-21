@@ -10,18 +10,13 @@
 ## コンテナイメージ作成
 
 ```sh
-$ docker build -t akazawa/postfix ./
+$ docker build -t akazawa_postfix ./
 ```
 
 ## コンテナ起動
 
 ```sh
-$ docker run -d --name postfix -e TIMEZONE=Asia/Tokyo \
-     -e MESSAGE_SIZE_LIMIT=10240000 -e AUTH_USER=user \
-     -e AUTH_PASSWORD=password \
-     -e DISABLE_SMTP_AUTH_ON_PORT_25=true \
-     -p 8587:587 -p 8465:465 --privileged \
-     akazawa/postfix
+$ docker run -d --name postfix -e TIMEZONE=Asia/Tokyo -e MESSAGE_SIZE_LIMIT=10240000 -e AUTH_USER=user -e AUTH_PASSWORD=password -e DISABLE_SMTP_AUTH_ON_PORT_25=true -p 8587:587 -p 8465:465 --privileged akazawa_postfix
 ```
 
 ## Port No.
