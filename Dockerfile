@@ -78,17 +78,17 @@ RUN yum -y install epel-release; \
     } > /etc/supervisord.d/tail.ini; \
     yum clean all;
 
-# ƒc[ƒ‹ƒCƒ“ƒXƒg[ƒ‹
+# ãƒ„ãƒ¼ãƒ«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 RUN yum --enablerepo=centosplus install postfix-perl-scripts; \
     yum localinstall -y http://mirror.centos.org/centos/6; \
     yum install nkf; \
     yum install epel-release; \
     yum clean all;
 
-# ƒZƒbƒgƒAƒbƒv
+# ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—
 ADD ./mail.txt ./work/mail.txt
 ADD ./sendjpmail.sh ./work/sendjpmail.sh
-ADD ./main.cf /etc/postfix/main.cf
+#ADD ./main.cf /etc/postfix/main.cf
 
 # entrypoint
 RUN { \
